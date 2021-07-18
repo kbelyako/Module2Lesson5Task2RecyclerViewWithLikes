@@ -15,7 +15,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cat" />
+        app:srcCompat="@drawable/cat2" />
 
     <TextView
         android:id="@+id/tvNewsTitle"
@@ -23,7 +23,6 @@
         android:layout_height="38dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
         android:text="Удивленный кот Федя из Ростова стал звездой соцсетей"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/ivNewsPicture"
@@ -32,8 +31,8 @@
     <TextView
         android:id="@+id/tvNewsText"
         android:layout_width="378dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text='РОСТОВ-НА-ДОНУ, 24 июн – РИА Новости, Юлия Насулина. Домашний кот Федя из Ростовской области с вечно удивленными глазами стал героем десятка публикаций в зарубежных СМИ и продолжает набирать популярность в соцсетях, рассказала РИА Новости хозяйка животного Наталья Жданова. По ее словам, несколько лет назад к ним во двор пришла кошка, по виду напоминающая породу "шотландская вислоухая", и осталась у них жить. Позже она родила двух котят, одного из которых они решили оставить. "Он с рождения был слабеньким, были проблемы с координацией, аллергия. Мы его еле откачали. И вот из этого котика и вырос наш Федя", - сказала Жданова.'
         app:layout_constraintBottom_toBottomOf="parent"
