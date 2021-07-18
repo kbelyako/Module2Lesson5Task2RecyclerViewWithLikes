@@ -8,6 +8,7 @@ package com.example.module2lesson5task1recyclerview
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -17,9 +18,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.d("MyLOG","News N app started")
+
         var newsItems = getNewsItems()
         rvNews.adapter=NewsAdapter(this,newsItems)
         rvNews.layoutManager=LinearLayoutManager(this)
+
     }
 
     fun getNewsItems():ArrayList<NewsItem>{
