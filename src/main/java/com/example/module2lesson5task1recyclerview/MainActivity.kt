@@ -1,8 +1,10 @@
 package com.example.module2lesson5task1recyclerview
 /*
-ДЗ. Задание 1. Легкое
 Написать список новостей, в котором есть картинка, заголовок, текст. Количество новостей –
 15 шт (можно дублирующиеся). Если текст слишком длинный, он обрезается.
+ДЗ. Задание 2. Среднее
+Добавить счетчик количества лайков, возможность поставить/убрать лайк (должно
+измениться количество лайков).
  */
 
 import android.graphics.BitmapFactory
@@ -11,17 +13,22 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_news.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),NewsItemCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         Log.d("MyLOG","News N app started")
 
+
+
+
+
         var newsItems = getNewsItems()
-        rvNews.adapter=NewsAdapter(this,newsItems)
+        rvNews.adapter=NewsAdapter(this,newsItems,this)
         rvNews.layoutManager=LinearLayoutManager(this)
 
     }
@@ -250,6 +257,8 @@ class MainActivity : AppCompatActivity() {
 
         return newsItems
     }
-
+    override fun onItemSelected(index: Int) {
+        Log.d("MyLOG","News N "+index+" selected")
+    }
 
 }
